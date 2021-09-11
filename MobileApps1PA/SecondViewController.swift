@@ -14,8 +14,16 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         let ref = Database.database().reference()
+        let num = 1
+        var rescount = 0
         // check connection ref.child("restaurants/test").setValue("jordan")
-        ref.child("restaurants").observeSingleEvent(of: .value, with: {snapshot in guard let value = snapshot.value as? [String: Any] else {
+        ref.child("restaurants/").observeSingleEvent(of: .value, with: {snapshot in guard let allres = snapshot.value as? [String: Any] else {
+            return}
+            rescount = allres.count
+            print("All Restaurants: \(rescount)")
+        })
+        
+        ref.child("restaurants/res\(num)").observeSingleEvent(of: .value, with: {snapshot in guard let value = snapshot.value as? [String: Any] else {
             return}
             print("Value: \(value)")
         })
