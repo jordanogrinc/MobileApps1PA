@@ -9,28 +9,32 @@ import UIKit
 import FirebaseDatabase
 
 class SecondViewController: UIViewController {
+    public var rescount = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         let ref = Database.database().reference()
         let num = 1
-        var rescount = 0
+        //public var rescount = 0
         // check connection ref.child("restaurants/test").setValue("jordan")
+        
+        //will need the count of the number of restaurants for bounds of random
         ref.child("restaurants/").observeSingleEvent(of: .value, with: {snapshot in guard let allres = snapshot.value as? [String: Any] else {
             return}
-            rescount = allres.count
-            print("All Restaurants: \(rescount)")
+            self.rescount = allres.count
+            
+            print("All Restaurants: \(self.rescount)")
         })
-        
-        ref.child("restaurants/res\(num)").observeSingleEvent(of: .value, with: {snapshot in guard let value = snapshot.value as? [String: Any] else {
-            return}
-            print("Value: \(value)")
-        })
+    
     }
     
     @IBAction func secondbtn(_ sender: Any) {
-        print("TEST")
+        let ref = Database.database().reference()
+        ref.child("restaurants/res\(Int.random(in:0..<(self.rescount)))").observeSingleEvent(of: .value, with: {snapshot in guard let value = snapshot.value as? [String: Any] else {
+            return}
+            print("Value: \(value)")
+        })
     }
     /*
     // MARK: - Navigation
