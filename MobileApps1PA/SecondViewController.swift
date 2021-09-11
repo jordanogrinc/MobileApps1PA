@@ -7,13 +7,19 @@
 
 import UIKit
 import FirebaseDatabase
+import MapKit
 
 class SecondViewController: UIViewController {
     public var rescount = 0
 
-    @IBOutlet weak var NameText: UILabel!
-
-    @IBOutlet weak var AddrText: UILabel!
+    
+    @IBOutlet weak var resNameText: UILabel!
+    
+    @IBOutlet weak var resAddr1Text: UILabel!
+    
+    @IBOutlet weak var resAddr2Text: UILabel!
+    
+    @IBOutlet weak var map: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +34,7 @@ class SecondViewController: UIViewController {
             return}
             self.rescount = allres.count
             
-            print("All Restaurants: \(self.rescount)")
+            //print("All Restaurants: \(self.rescount)")
         })
     
     }
@@ -38,11 +44,18 @@ class SecondViewController: UIViewController {
         ref.child("restaurants/res\(Int.random(in:0..<(self.rescount)))").observeSingleEvent(of: .value, with: {snapshot in guard let value = snapshot.value as? [String: Any] else {
             return}
             let resName = value["name"] as? String ?? ""
-            //var resname = value["name"]
-            print(value)
-            print(resName)
+            let resAddr1 = value["addr1"] as? String ?? ""
+            let resAddr2 = value["addr2"] as? String ?? ""
+            let resLatStr = value["lat"] as? String ?? ""
+            let resLongStr = value["long"] as? String ?? ""
+            let resLat = Double(resLatStr)
+            let resLong = Double(resLongStr)
+            print(resLat)
+            print(resLong)
             
-            //self.NameText.text = "\(value["name"])"
+            self.resNameText.text = "\(resName)"
+            self.resAddr1Text.text = "\(resAddr1)"
+            self.resAddr2Text.text = "\(resAddr2)"
             //print("Value: \(value.keys) and \(String(describing: value["name"]))")
         })
     }

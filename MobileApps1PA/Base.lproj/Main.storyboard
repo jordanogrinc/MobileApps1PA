@@ -60,20 +60,26 @@
                                     <action selector="secondbtn:" destination="0Pu-0F-bMA" eventType="touchUpInside" id="1BB-gy-8BX"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fuc-39-1ML">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Random Restaurant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVf-nZ-sS5">
+                                <rect key="frame" x="132" y="50" width="150" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E57-WE-O0q">
                                 <rect key="frame" x="207" y="161" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vt8-Sh-ptS">
-                                <rect key="frame" x="207" y="215" width="0.0" height="0.0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWm-S2-HZz">
+                                <rect key="frame" x="207" y="191" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Random Restaurant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVf-nZ-sS5">
-                                <rect key="frame" x="132" y="50" width="150" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4e9-Eb-DXY">
+                                <rect key="frame" x="207" y="196" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -82,26 +88,29 @@
                         <viewLayoutGuide key="safeArea" id="SWT-OS-IPA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="E57-WE-O0q" firstAttribute="top" secondItem="d8Z-hZ-v1k" secondAttribute="bottom" constant="30" id="6NE-PO-bP5"/>
                             <constraint firstItem="QVf-nZ-sS5" firstAttribute="centerX" secondItem="GIa-l6-hT4" secondAttribute="centerX" id="6bN-X9-ln6"/>
-                            <constraint firstItem="Fuc-39-1ML" firstAttribute="top" secondItem="d8Z-hZ-v1k" secondAttribute="bottom" constant="30" id="9w9-Cc-nrR"/>
-                            <constraint firstItem="vt8-Sh-ptS" firstAttribute="top" secondItem="Fuc-39-1ML" secondAttribute="bottom" constant="54" id="Aex-iq-b7a"/>
+                            <constraint firstItem="bWm-S2-HZz" firstAttribute="top" secondItem="E57-WE-O0q" secondAttribute="bottom" constant="30" id="DFb-ic-Gkq"/>
+                            <constraint firstItem="bWm-S2-HZz" firstAttribute="centerX" secondItem="GIa-l6-hT4" secondAttribute="centerX" id="DQW-Gk-YxW"/>
+                            <constraint firstItem="4e9-Eb-DXY" firstAttribute="centerX" secondItem="GIa-l6-hT4" secondAttribute="centerX" id="EUu-lA-Yqf"/>
                             <constraint firstItem="d8Z-hZ-v1k" firstAttribute="centerX" secondItem="GIa-l6-hT4" secondAttribute="centerX" id="Hgu-Ua-Vxf"/>
-                            <constraint firstItem="vt8-Sh-ptS" firstAttribute="centerX" secondItem="GIa-l6-hT4" secondAttribute="centerX" id="I6R-TC-fta"/>
                             <constraint firstItem="d8Z-hZ-v1k" firstAttribute="top" secondItem="QVf-nZ-sS5" secondAttribute="bottom" constant="30" id="Ik2-WS-3T1"/>
                             <constraint firstItem="QVf-nZ-sS5" firstAttribute="top" secondItem="SWT-OS-IPA" secondAttribute="top" constant="50" id="S0x-SA-CuJ"/>
-                            <constraint firstItem="Fuc-39-1ML" firstAttribute="centerX" secondItem="GIa-l6-hT4" secondAttribute="centerX" id="TIA-zn-UcF"/>
+                            <constraint firstItem="E57-WE-O0q" firstAttribute="centerX" secondItem="GIa-l6-hT4" secondAttribute="centerX" id="iGo-FP-Reu"/>
+                            <constraint firstItem="4e9-Eb-DXY" firstAttribute="top" secondItem="bWm-S2-HZz" secondAttribute="bottom" constant="5" id="qvM-GM-lDb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LW7-LY-9Sf"/>
                     <connections>
-                        <outlet property="AddrText" destination="vt8-Sh-ptS" id="Sd4-Cp-8vq"/>
-                        <outlet property="NameText" destination="Fuc-39-1ML" id="WSJ-em-8Fd"/>
+                        <outlet property="resAddr1Text" destination="bWm-S2-HZz" id="6jO-Ob-Y8f"/>
+                        <outlet property="resAddr2Text" destination="4e9-Eb-DXY" id="haC-g6-TXQ"/>
+                        <outlet property="resNameText" destination="E57-WE-O0q" id="AJs-9y-8pc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="idZ-u9-uUE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="H6M-2C-z3s" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="788" y="88"/>
+            <point key="canvasLocation" x="786.95652173913049" y="87.723214285714278"/>
         </scene>
     </scenes>
     <resources>
