@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         let ref = Database.database().reference()
-        ref.child("restaurants/test").setValue("hello")
+        ref.child("restaurants/test").setValue("hi")
     }
 
 

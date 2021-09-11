@@ -6,16 +6,18 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func secondbtn(_ sender: Any) {
+        print("TEST")
+    }
     /*
     // MARK: - Navigation
 
