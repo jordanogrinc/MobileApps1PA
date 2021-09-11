@@ -13,6 +13,12 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let ref = Database.database().reference()
+        // check connection ref.child("restaurants/test").setValue("jordan")
+        ref.child("restaurants").observeSingleEvent(of: .value, with: {snapshot in guard let value = snapshot.value as? [String: Any] else {
+            return}
+            print("Value: \(value)")
+        })
     }
     
     @IBAction func secondbtn(_ sender: Any) {
