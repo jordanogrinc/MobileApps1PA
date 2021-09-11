@@ -11,11 +11,15 @@ import FirebaseDatabase
 class SecondViewController: UIViewController {
     public var rescount = 0
 
+    @IBOutlet weak var NameText: UILabel!
+
+    @IBOutlet weak var AddrText: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         let ref = Database.database().reference()
-        let num = 1
+        //let num = 1
         //public var rescount = 0
         // check connection ref.child("restaurants/test").setValue("jordan")
         
@@ -33,7 +37,13 @@ class SecondViewController: UIViewController {
         let ref = Database.database().reference()
         ref.child("restaurants/res\(Int.random(in:0..<(self.rescount)))").observeSingleEvent(of: .value, with: {snapshot in guard let value = snapshot.value as? [String: Any] else {
             return}
-            print("Value: \(value)")
+            let resName = value["name"] as? String ?? ""
+            //var resname = value["name"]
+            print(value)
+            print(resName)
+            
+            //self.NameText.text = "\(value["name"])"
+            //print("Value: \(value.keys) and \(String(describing: value["name"]))")
         })
     }
     /*

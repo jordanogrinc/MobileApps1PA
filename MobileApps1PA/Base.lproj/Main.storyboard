@@ -52,31 +52,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Random Restaurant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVf-nZ-sS5">
-                                <rect key="frame" x="132" y="335" width="150" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8Z-hZ-v1k">
-                                <rect key="frame" x="184" y="406" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="103.5" y="101" width="207" height="30"/>
+                                <state key="normal" title="Give me a Random Restaurant"/>
                                 <connections>
                                     <action selector="addbtn:" destination="H6M-2C-z3s" eventType="touchUpInside" id="1El-Wb-nyI"/>
                                     <action selector="secondbtn:" destination="0Pu-0F-bMA" eventType="touchUpInside" id="1BB-gy-8BX"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fuc-39-1ML">
+                                <rect key="frame" x="207" y="161" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vt8-Sh-ptS">
+                                <rect key="frame" x="207" y="215" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Random Restaurant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVf-nZ-sS5">
+                                <rect key="frame" x="132" y="50" width="150" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SWT-OS-IPA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="QVf-nZ-sS5" firstAttribute="centerX" secondItem="GIa-l6-hT4" secondAttribute="centerX" id="1UA-ox-biG"/>
-                            <constraint firstItem="d8Z-hZ-v1k" firstAttribute="centerY" secondItem="GIa-l6-hT4" secondAttribute="centerY" id="VX4-i6-7ks"/>
-                            <constraint firstItem="d8Z-hZ-v1k" firstAttribute="top" secondItem="QVf-nZ-sS5" secondAttribute="bottom" constant="50" id="eHK-Ja-yxz"/>
-                            <constraint firstItem="d8Z-hZ-v1k" firstAttribute="centerX" secondItem="GIa-l6-hT4" secondAttribute="centerX" id="i4I-ar-9KF"/>
+                            <constraint firstItem="QVf-nZ-sS5" firstAttribute="centerX" secondItem="GIa-l6-hT4" secondAttribute="centerX" id="6bN-X9-ln6"/>
+                            <constraint firstItem="Fuc-39-1ML" firstAttribute="top" secondItem="d8Z-hZ-v1k" secondAttribute="bottom" constant="30" id="9w9-Cc-nrR"/>
+                            <constraint firstItem="vt8-Sh-ptS" firstAttribute="top" secondItem="Fuc-39-1ML" secondAttribute="bottom" constant="54" id="Aex-iq-b7a"/>
+                            <constraint firstItem="d8Z-hZ-v1k" firstAttribute="centerX" secondItem="GIa-l6-hT4" secondAttribute="centerX" id="Hgu-Ua-Vxf"/>
+                            <constraint firstItem="vt8-Sh-ptS" firstAttribute="centerX" secondItem="GIa-l6-hT4" secondAttribute="centerX" id="I6R-TC-fta"/>
+                            <constraint firstItem="d8Z-hZ-v1k" firstAttribute="top" secondItem="QVf-nZ-sS5" secondAttribute="bottom" constant="30" id="Ik2-WS-3T1"/>
+                            <constraint firstItem="QVf-nZ-sS5" firstAttribute="top" secondItem="SWT-OS-IPA" secondAttribute="top" constant="50" id="S0x-SA-CuJ"/>
+                            <constraint firstItem="Fuc-39-1ML" firstAttribute="centerX" secondItem="GIa-l6-hT4" secondAttribute="centerX" id="TIA-zn-UcF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LW7-LY-9Sf"/>
+                    <connections>
+                        <outlet property="AddrText" destination="vt8-Sh-ptS" id="Sd4-Cp-8vq"/>
+                        <outlet property="NameText" destination="Fuc-39-1ML" id="WSJ-em-8Fd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="idZ-u9-uUE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="H6M-2C-z3s" userLabel="Exit" sceneMemberID="exit"/>
