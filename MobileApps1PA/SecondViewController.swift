@@ -12,6 +12,7 @@ import MapKit
 class SecondViewController: UIViewController {
     public var rescount = 0
     let apiKey = "f4e748441e400659b6033a3abbead4c9"
+    var citytemp = "80.82"
 
     
     @IBOutlet weak var resNameText: UILabel!
@@ -43,6 +44,7 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func secondbtn(_ sender: Any) {
+        //var numholder = "1.2"
         let hapgen = UINotificationFeedbackGenerator()
         hapgen.notificationOccurred(.success)
         let ref = Database.database().reference()
@@ -58,18 +60,43 @@ class SecondViewController: UIViewController {
             self.resAddr1Text.text = "\(resAddr1)"
             self.resAddr2Text.text = "\(resAddr2)"
             self.TempTitle.text = "\(resCity) Current Temperature:"
-            //print("TEST : https://api.openweathermap.org/data/2.5/weather?q=\(resCity),\(resState.lowercased()),usa&appid=\(self.apiKey)")
+            print("TEST : https://api.openweathermap.org/data/2.5/weather?q=\(resCity),\(resState.lowercased()),usa&appid=\(self.apiKey)")
+
             if let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(resCity),\(resState.lowercased()),usa&appid=\(self.apiKey)") {
-                URLSession.shared.dataTask(with: url) {
-                    data, respose, error in
-                    if let data = data {
-                        if let jsonString = String(data: data, encoding: .utf8) {
-                            print(jsonString)
+                URLSession.shared.dataTask(with: url) { [self]
+                    weatherdata, respose, error in
+                    if let weatherdata = weatherdata {
+                        if let jsonString = String(data: weatherdata, encoding: .utf8) {
+                            //print(jsonString)
+                            let res = jsonString.components(separatedBy: "temp")
+                            //print(res[0])
+                            //print("next")
+                            /*
+                            let line = res[1].components(separatedBy: ":")
+                            print("line: \(line)")
+                            let tempnum = line[1].components(separatedBy: ",")
+                            print("line: \(tempnum)")
+                            let finaltempnum = tempnum[0]
+                            print("final \(finaltempnum)")
+                            */
+                            let finaltempKelvinStr = (((res[1].components(separatedBy: ":"))[1].components(separatedBy: ","))[0])
+                            let tempKelvinDoub = Double(finaltempKelvinStr)
+                            //convert from Kelvin to F
+                            let finalTempF = (((tempKelvinDoub! - 273.15)*Double(9))/Double(5)) + Double(32)
+                            //print(finalTempF)
+                            let tempDisplay = String(format: "%.2f", finalTempF)
+        
+                            citytemp = tempDisplay
+                            
                         }
                     }
                 }.resume()
             }
+            self.TempDisplay.text = "\(self.citytemp)"
+            
         })
+        
+        
     }
     /*
     // MARK: - Navigation
