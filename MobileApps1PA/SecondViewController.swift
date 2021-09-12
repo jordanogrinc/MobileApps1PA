@@ -58,7 +58,17 @@ class SecondViewController: UIViewController {
             self.resAddr1Text.text = "\(resAddr1)"
             self.resAddr2Text.text = "\(resAddr2)"
             self.TempTitle.text = "\(resCity) Current Temperature:"
-            print("TEST : https://api.openweathermap.org/data/2.5/weather?q=\(resCity),\(resState.lowercased()),usa&appid=\(self.apiKey)")
+            //print("TEST : https://api.openweathermap.org/data/2.5/weather?q=\(resCity),\(resState.lowercased()),usa&appid=\(self.apiKey)")
+            if let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(resCity),\(resState.lowercased()),usa&appid=\(self.apiKey)") {
+                URLSession.shared.dataTask(with: url) {
+                    data, respose, error in
+                    if let data = data {
+                        if let jsonString = String(data: data, encoding: .utf8) {
+                            print(jsonString)
+                        }
+                    }
+                }.resume()
+            }
         })
     }
     /*
