@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		8148D27C26ED4498003F410B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8148D27A26ED4498003F410B /* LaunchScreen.storyboard */; };
 		8148D28426ED4676003F410B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8148D28326ED4676003F410B /* SecondViewController.swift */; };
 		8148D28626ED47FA003F410B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8148D28526ED47FA003F410B /* GoogleService-Info.plist */; };
+		8148D28826ED7E15003F410B /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8148D28726ED7E15003F410B /* AddViewController.swift */; };
 		B88034038A4EE91344164BCA /* Pods_MobileApps1PA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4A6706D7D2DF6C2534673F /* Pods_MobileApps1PA.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		8148D27D26ED4498003F410B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8148D28326ED4676003F410B /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		8148D28526ED47FA003F410B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8148D28726ED7E15003F410B /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		8A0BB4D65B56DAE7E8C4456C /* Pods-MobileApps1PA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileApps1PA.release.xcconfig"; path = "Target Support Files/Pods-MobileApps1PA/Pods-MobileApps1PA.release.xcconfig"; sourceTree = "<group>"; };
 		93329A25D2E55362F23A7629 /* Pods-MobileApps1PA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileApps1PA.debug.xcconfig"; path = "Target Support Files/Pods-MobileApps1PA/Pods-MobileApps1PA.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,7 +54,6 @@
 				93329A25D2E55362F23A7629 /* Pods-MobileApps1PA.debug.xcconfig */,
 				8A0BB4D65B56DAE7E8C4456C /* Pods-MobileApps1PA.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,6 +82,7 @@
 				8148D27126ED4495003F410B /* SceneDelegate.swift */,
 				8148D27326ED4495003F410B /* ViewController.swift */,
 				8148D27526ED4495003F410B /* Main.storyboard */,
+				8148D28726ED7E15003F410B /* AddViewController.swift */,
 				8148D28326ED4676003F410B /* SecondViewController.swift */,
 				8148D27826ED4498003F410B /* Assets.xcassets */,
 				8148D27A26ED4498003F410B /* LaunchScreen.storyboard */,
@@ -213,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8148D28826ED7E15003F410B /* AddViewController.swift in Sources */,
 				8148D28426ED4676003F410B /* SecondViewController.swift in Sources */,
 				8148D27426ED4495003F410B /* ViewController.swift in Sources */,
 				8148D27026ED4495003F410B /* AppDelegate.swift in Sources */,

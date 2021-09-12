@@ -11,6 +11,7 @@ import MapKit
 
 class SecondViewController: UIViewController {
     public var rescount = 0
+    let apiKey = "f4e748441e400659b6033a3abbead4c9"
 
     
     @IBOutlet weak var resNameText: UILabel!
@@ -18,8 +19,6 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var resAddr1Text: UILabel!
     
     @IBOutlet weak var resAddr2Text: UILabel!
-    
-    @IBOutlet weak var map: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,12 +45,6 @@ class SecondViewController: UIViewController {
             let resName = value["name"] as? String ?? ""
             let resAddr1 = value["addr1"] as? String ?? ""
             let resAddr2 = value["addr2"] as? String ?? ""
-            let resLatStr = value["lat"] as? String ?? ""
-            let resLongStr = value["long"] as? String ?? ""
-            let resLat = Double(resLatStr)
-            let resLong = Double(resLongStr)
-            print(resLat)
-            print(resLong)
             
             self.resNameText.text = "\(resName)"
             self.resAddr1Text.text = "\(resAddr1)"
