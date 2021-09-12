@@ -225,24 +225,42 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FMi-bk-m6i">
+                                <rect key="frame" x="207" y="326" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgb-Zh-pPP">
+                                <rect key="frame" x="207" y="336" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SWT-OS-IPA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="E57-WE-O0q" firstAttribute="top" secondItem="d8Z-hZ-v1k" secondAttribute="bottom" constant="30" id="6NE-PO-bP5"/>
                             <constraint firstItem="QVf-nZ-sS5" firstAttribute="centerX" secondItem="GIa-l6-hT4" secondAttribute="centerX" id="6bN-X9-ln6"/>
+                            <constraint firstItem="FMi-bk-m6i" firstAttribute="top" secondItem="4e9-Eb-DXY" secondAttribute="bottom" constant="30" id="9Xj-HY-qwh"/>
                             <constraint firstItem="bWm-S2-HZz" firstAttribute="top" secondItem="E57-WE-O0q" secondAttribute="bottom" constant="30" id="DFb-ic-Gkq"/>
                             <constraint firstItem="bWm-S2-HZz" firstAttribute="centerX" secondItem="GIa-l6-hT4" secondAttribute="centerX" id="DQW-Gk-YxW"/>
                             <constraint firstItem="4e9-Eb-DXY" firstAttribute="centerX" secondItem="GIa-l6-hT4" secondAttribute="centerX" id="EUu-lA-Yqf"/>
+                            <constraint firstItem="FMi-bk-m6i" firstAttribute="centerX" secondItem="GIa-l6-hT4" secondAttribute="centerX" id="GRe-eW-V8q"/>
                             <constraint firstItem="d8Z-hZ-v1k" firstAttribute="centerX" secondItem="GIa-l6-hT4" secondAttribute="centerX" id="Hgu-Ua-Vxf"/>
                             <constraint firstItem="d8Z-hZ-v1k" firstAttribute="top" secondItem="QVf-nZ-sS5" secondAttribute="bottom" constant="30" id="Ik2-WS-3T1"/>
                             <constraint firstItem="QVf-nZ-sS5" firstAttribute="top" secondItem="SWT-OS-IPA" secondAttribute="top" constant="150" id="S0x-SA-CuJ"/>
+                            <constraint firstItem="dgb-Zh-pPP" firstAttribute="top" secondItem="FMi-bk-m6i" secondAttribute="bottom" constant="10" id="VL8-Xr-2Ty"/>
                             <constraint firstItem="E57-WE-O0q" firstAttribute="centerX" secondItem="GIa-l6-hT4" secondAttribute="centerX" id="iGo-FP-Reu"/>
                             <constraint firstItem="4e9-Eb-DXY" firstAttribute="top" secondItem="bWm-S2-HZz" secondAttribute="bottom" constant="5" id="qvM-GM-lDb"/>
+                            <constraint firstItem="dgb-Zh-pPP" firstAttribute="centerX" secondItem="GIa-l6-hT4" secondAttribute="centerX" id="won-Dl-nsL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LW7-LY-9Sf"/>
                     <connections>
+                        <outlet property="TempDisplay" destination="dgb-Zh-pPP" id="eXG-gW-2Uc"/>
+                        <outlet property="TempTitle" destination="FMi-bk-m6i" id="cXF-Ql-rhX"/>
                         <outlet property="resAddr1Text" destination="bWm-S2-HZz" id="6jO-Ob-Y8f"/>
                         <outlet property="resAddr2Text" destination="4e9-Eb-DXY" id="haC-g6-TXQ"/>
                         <outlet property="resNameText" destination="E57-WE-O0q" id="AJs-9y-8pc"/>
