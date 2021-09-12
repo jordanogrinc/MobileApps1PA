@@ -84,7 +84,7 @@ class SecondViewController: UIViewController {
                             //convert from Kelvin to F
                             let finalTempF = (((tempKelvinDoub! - 273.15)*Double(9))/Double(5)) + Double(32)
                             //print(finalTempF)
-                            let tempDisplay = String(format: "%.2f", finalTempF)
+                            let tempDisplay = String(format: "%.1f", finalTempF)
                             print("actual temp \(tempDisplay)")
                             //citytemp = tempDisplay
                             //print("temp display is:\(tempDisplay)")
@@ -92,7 +92,7 @@ class SecondViewController: UIViewController {
                             //self.TempDisplay.text = "\(self.citytemp)"
                             DispatchQueue.main.async {
                                 print("changing now")
-                                self.TempDisplay.text = "\(tempDisplay)"
+                                self.TempDisplay.text = "\(tempDisplay) *F"
                                        }
                             
                         }
