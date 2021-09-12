@@ -12,7 +12,7 @@ import MapKit
 class SecondViewController: UIViewController {
     public var rescount = 0
     let apiKey = "f4e748441e400659b6033a3abbead4c9"
-    var citytemp = "80.82"
+    //var citytemp = "80.82"
 
     
     @IBOutlet weak var resNameText: UILabel!
@@ -60,7 +60,7 @@ class SecondViewController: UIViewController {
             self.resAddr1Text.text = "\(resAddr1)"
             self.resAddr2Text.text = "\(resAddr2)"
             self.TempTitle.text = "\(resCity) Current Temperature:"
-            print("TEST : https://api.openweathermap.org/data/2.5/weather?q=\(resCity),\(resState.lowercased()),usa&appid=\(self.apiKey)")
+            //print("TEST : https://api.openweathermap.org/data/2.5/weather?q=\(resCity),\(resState.lowercased()),usa&appid=\(self.apiKey)")
 
             if let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(resCity),\(resState.lowercased()),usa&appid=\(self.apiKey)") {
                 URLSession.shared.dataTask(with: url) { [self]
@@ -85,17 +85,24 @@ class SecondViewController: UIViewController {
                             let finalTempF = (((tempKelvinDoub! - 273.15)*Double(9))/Double(5)) + Double(32)
                             //print(finalTempF)
                             let tempDisplay = String(format: "%.2f", finalTempF)
-        
-                            citytemp = tempDisplay
+                            print("actual temp \(tempDisplay)")
+                            //citytemp = tempDisplay
+                            //print("temp display is:\(tempDisplay)")
+                            //print("city display is:\(citytemp)")
+                            //self.TempDisplay.text = "\(self.citytemp)"
+                            DispatchQueue.main.async {
+                                print("changing now")
+                                self.TempDisplay.text = "\(tempDisplay)"
+                                       }
                             
                         }
                     }
                 }.resume()
             }
-            self.TempDisplay.text = "\(self.citytemp)"
+            //self.TempDisplay.text = "\(self.citytemp)"
             
         })
-        
+        //print("afterwards: \(citytemp)")
         
     }
     /*
