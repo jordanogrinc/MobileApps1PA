@@ -33,13 +33,7 @@ class AddViewController: UIViewController {
     
     @IBAction func AddBtn(_ sender: Any) {
         let ref = Database.database().reference()
-        let nameInput = NameText.text;
-        let cityInput = CityText.text;
-        let stateInput = StateText.text;
-        let addr1Input = Address1Text.text;
-        let addr2Input = Address2Text.text;
         
-        //we need to get the count to know what res# we are adding
         //ref.child("restaurants/res\(self.resnum)").setValue("jordan")
         ref.child("restaurants/res\(self.resnum)/name").setValue("\(NameText.text!)")
         ref.child("restaurants/res\(self.resnum)/city").setValue("\(CityText.text!)")

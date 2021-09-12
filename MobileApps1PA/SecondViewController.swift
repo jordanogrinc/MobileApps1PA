@@ -44,7 +44,6 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func secondbtn(_ sender: Any) {
-        //var numholder = "1.2"
         let hapgen = UINotificationFeedbackGenerator()
         hapgen.notificationOccurred(.success)
         let ref = Database.database().reference()
@@ -55,7 +54,7 @@ class SecondViewController: UIViewController {
             let resAddr2 = value["addr2"] as? String ?? ""
             let resCity = value["city"] as? String ?? ""
             let resState = value["state"] as? String ?? ""
-            
+            //print("\(resaName)")
             self.resNameText.text = "\(resName)"
             self.resAddr1Text.text = "\(resAddr1)"
             self.resAddr2Text.text = "\(resAddr2)"
@@ -69,29 +68,13 @@ class SecondViewController: UIViewController {
                         if let jsonString = String(data: weatherdata, encoding: .utf8) {
                             //print(jsonString)
                             let res = jsonString.components(separatedBy: "temp")
-                            //print(res[0])
-                            //print("next")
-                            /*
-                            let line = res[1].components(separatedBy: ":")
-                            print("line: \(line)")
-                            let tempnum = line[1].components(separatedBy: ",")
-                            print("line: \(tempnum)")
-                            let finaltempnum = tempnum[0]
-                            print("final \(finaltempnum)")
-                            */
                             let finaltempKelvinStr = (((res[1].components(separatedBy: ":"))[1].components(separatedBy: ","))[0])
                             let tempKelvinDoub = Double(finaltempKelvinStr)
                             //convert from Kelvin to F
                             let finalTempF = (((tempKelvinDoub! - 273.15)*Double(9))/Double(5)) + Double(32)
-                            //print(finalTempF)
                             let tempDisplay = String(format: "%.1f", finalTempF)
-                            print("actual temp \(tempDisplay)")
-                            //citytemp = tempDisplay
-                            //print("temp display is:\(tempDisplay)")
-                            //print("city display is:\(citytemp)")
-                            //self.TempDisplay.text = "\(self.citytemp)"
                             DispatchQueue.main.async {
-                                print("changing now")
+                                //print("changing now")
                                 self.TempDisplay.text = "\(tempDisplay) *F"
                                        }
                             
